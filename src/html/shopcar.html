@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物袋</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/head.js"></script>
+    <script src="../js/cookie.js"></script>
+    <link rel="stylesheet" href="../sass/shopcar.css">
+    <link href="./bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <ul class="left-content">
+            <li>
+                <div class="scan-code">
+                    <a href="#">关注</a>
+                    <div class="border-content guanzhu" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/weChat.jpg" alt="关注公众号" class="qr-code"><br>
+                            <span class="title">关注公众号</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-app">
+                <div class="scan-code">
+                    <a href="#">下载APP</a>
+                    <div class="border-content xiazai" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/app.jpg" alt="优购APP下载" class="qr-code"><br>
+                            <span class="title">优购APP下载</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="right-content">
+            <li class="item-frist about_user">
+                <a href="./login.html">登录</a>/
+                <a href="./reg.html">注册</a>
+            </li>
+            <li class="item ">
+                <a href="#" class="top-collect">
+                    <i class="heart"></i>
+                    <span class="title">收藏</span>
+                </a>
+            </li>
+            <li class="item-cart">
+                <a href="./shopcar.html"><i class="shopping-cart"></i>购物袋</a>
+            </li>
+            <li class="item">
+                <div class="notice">
+                    <a href="#">公告</a>
+                    <div class="notice-content" style="background:#fff">
+                        <ul class="notice-list">
+                            <li class="item ">
+                                <a target="_blank" href="#">优购客服电话变更</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">关闭分享购频道</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">提醒会员谨防诈骗电话</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="uheader">
+        <div class="ulogo"><img src="../images/logo-yg.png" alt=""></div>
+        <div class="utxt">
+            <ul>
+                <li class="now">
+                    我的购物袋
+                    <em></em>
+                    <i>  
+                    </i>
+                </li>
+                <li>
+                    提交订单中心
+                    <em></em>
+                    <i>  
+                        </i>
+                </li>
+                <li>
+                    成功提交订单
+                    <em></em>
+                    <i>  
+                            </i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--购物车界面-->
+    <div class="shopcar">
+        <ul class="itemlist">
+            <table>
+                <colgroup>
+                    <col width="60">
+                    <col width="370">
+                    <col width="110">
+                    <col width="110">
+                    <col width="110">
+                    <col width="110">
+                    <col width="120">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <label name="CNYcheckAllLabel" class="ygChkbox" tradecurrency="CNY">
+<input class="none selectall" type="checkbox" id="CNYcheckStartAll" name="CNYcheckAll" >
+全选
+</label>
+                        </th>
+                        <th>
+                            <span>商品名称</span>
+                        </th>
+                        <th>颜色尺码</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计(元)</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody class="table-content">
+                </tbody>
+            </table>
+            <ul class="shpcrt_operations">
+                <li>
+                    <label name="CNYcheckAllLabel" class="ygChkbox" tradecurrency="CNY">
+                                <input class="none selectall" type="checkbox" id="CNYcheckEndAll" name="CNYcheckAll">
+                                    全选
+                            </label>
+                </li>
+                <li>
+                    <a class="JsFavorite" pid="all" href="javascript:;">移入收藏夹</a>
+                </li>
+                <li>
+                    <a class="clearbag" pid="all" href="javascript:;">删除</a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            var shop = cookie.get('shop');
+            if (shop) {
+                shop = JSON.parse(shop);
+                var idList = shop.map(elm => elm.id).join();
+                $.ajax({
+                    type: "get",
+                    url: "../lib/shop.php",
+                    data: {
+                        'idList': idList
+                    },
+                    dataType: "json",
+                    success: function(data) {
+                        var tempstr = '';
+                        data.forEach(elm => {
+                            let pic = JSON.parse(elm.pic);
+                            let name = elm.name;
+                            var price = JSON.parse(elm.price);
+                            var arr = shop.filter((val, i) => {
+                                return val.id == elm.id;
+                            });
+                            // console.log(arr);
+                            // console.log(pic[0].p1)
+                            // console.log(name)
+                            tempstr += `
+                            <tr width="998" height="100" style="border: 1px solid red;">
+                            <th> 
+                                    <input class="none" type="checkbox" id="CNYcheckStartAll" name="CNYcheckAll">
+                                <span width="72" height="72">
+                                        <img src=${pic[0].p1} alt="" width="60" height="60">
+                                    </span></th>
+                            <th>
+                                <a href="#">${name}</a>
+                            </th>
+                            <th>
+                                颜色：黑色 <br>尺码：37
+                            </th>
+                            <th>${price}</th>
+                            <th>${arr[0].num}</th>
+                            <th><span class='count'>${(arr[0].num*elm.price).toFixed(2)}</span><br> 移入收藏夹
+                                <br> <span class="del" data-id=${shop.index}>删除</span>
+                                <br></th>
+                            <th></th>
+                        </tr>`;
+                        });
+                        $('tbody').append(tempstr);
+                        //全选
+                        $('.selectall').on('click', function() {
+                            $('input:not(.selectall)').prop('checked', $(this).prop('checked'));
+                            count()
+                        })
+                        $('input:not(.selectall)').on('click', function() {
+                            count()
+                        })
+
+
+                        //清除
+                        $('.clearbag').on('click', function() {
+                            cookie.remove('shop');
+                            location.reload()
+                        })
+
+                        //删除
+                        $('.del').on('click', function() {
+                            var i = $('.del').index($(this));
+                            console.log(shop[i])
+                            var arr = [];
+                            shop.forEach(elm => {
+                                if (shop[i].id != elm.id) {
+                                    arr.push(elm)
+                                }
+                            })
+                            cookie.remove('shop');
+                            cookie.set('shop', JSON.stringify(arr), 1)
+                            location.reload()
+                        })
+                    }
+                });
+            }
+
+            function count() {
+                var sum = 0;
+                $('.price').html(null)
+                    // $('.price')[0].innerHTML = null;
+                    // console.log(Number($('.shopcar').find('input:checked').parents('tr').find('.count').text()))
+                $('.shopcar').find('input:checked').parents('tr').find('.count').text(function(i, val) {
+                    sum += parseInt(val);
+                })
+                $('.price').append(sum)
+            }
+        })
+    </script>
+
+
+    <div class="sum">
+        <a href="#" class="continue">继续购物</a><a href="#" class="clearbag">清空购物车</a>
+        <span class="pricecul">
+        <strong>总计（不含运费）</strong><strong>￥<span class="price"></span></strong>
+        <a href="#" class="cal">去结算</a>
+        </span>
+    </div>
+    <!-- 说明 -->
+    <div class="shuoming">
+        <span class="shuominginfo">
+            <p class="ensure">
+                购物保障：<i class="hundred"></i>100%正品<i class="change"></i>10天退换货<i class="ten"></i>10天补差价
+            </p>
+            <p>优惠券/礼品卡在下一步使用</p>
+            <p><a href="#" target="_blank" class="cgray">帮助我们改进购物流程</a></p>
+        </span>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <span>
+	        	Copyright © 2011-2014 Yougou Technology Co., Ltd. 
+	        </span>
+        <span>
+	        	<a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备09070608号-4</a>
+	        </span>
+        <span>
+	        	增值电信业务经营许可证：<a href="http://www.miibeian.gov.cn" target="_blank">粤 B2-20090203</a>
+	        </span>
+    </div>
+</body>
+
+</html>

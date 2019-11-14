@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache,no-store, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <title>优购网_用户登录</title>
+    <meta name="description" content="优购网" />
+    <meta name="keywords" content="优购网" />
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../sass/login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <ul class="left-content">
+            <li>
+                <div class="scan-code">
+                    <a href="#">关注</a>
+                    <div class="border-content guanzhu" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/weChat.jpg" alt="关注公众号" class="qr-code"><br>
+                            <span class="title">关注公众号</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-app">
+                <div class="scan-code">
+                    <a href="#">下载APP</a>
+                    <div class="border-content xiazai" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/app.jpg" alt="优购APP下载" class="qr-code"><br>
+                            <span class="title">优购APP下载</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="right-content">
+            <li class="item-frist about_user">
+                <a href="./login.html">登录</a>/
+                <a href="./reg.html">注册</a>
+            </li>
+            <li class="item ">
+                <a href="#" class="top-collect">
+                    <i class="heart"></i>
+                    <span class="title">收藏</span>
+                </a>
+            </li>
+            <li class="item-cart">
+                <a href="./shopcar.html"><i class="shopping-cart"></i>购物袋</a>
+            </li>
+            <li class="item">
+                <div class="notice">
+                    <a href="#">公告</a>
+                    <div class="notice-content" style="background:#fff">
+                        <ul class="notice-list">
+                            <li class="item ">
+                                <a target="_blank" href="#">优购客服电话变更</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">关闭分享购频道</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">提醒会员谨防诈骗电话</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 登录主页面 -->
+    <div class="uc-header">
+        <div class="uc-wrapper">
+            <span class="img-wrapper"><img src="../images/signin-register-logo.png" alt=""></span><span class="word">用户登录</span>
+        </div>
+    </div>
+    <!-- 登录区 -->
+    <div class="big-wrapper">
+        <a href="./home.html">
+            <div id="body">
+                <div class="login_box">
+                    <div class="login_box_top">
+                        <li><a>账户密码登录</a></li>
+                        <li><a>手机快捷登录</a></li>
+                    </div>
+                    <form action="../lib/login.php" method="GET" class="form">
+                        <div class="third">
+                            <span></span>
+                            <input type="text" name="username" class="user_text" placeholder="手机号/会员名称/邮箱" />
+                        </div>
+                        <i>请输入账号</i>
+                        <div class="forth">
+                            <span></span>
+                            <input type="password" name="password" class="mima_text" placeholder="请输入密码" />
+                        </div>
+                        <i>请输入密码</i>
+                        <div class="phone" style="display: none">
+                            <div class="first">
+                                <div class="choice">
+                                    <a>手机号</a>
+                                </div>
+                                <input type="text" name="" class="phone_text" placeholder="请输入您的手机号码" />
+                            </div>
+                            <i>请输入手机号码</i>
+                            <div class="second">
+                                <div class="yanzhengma_duanxin">短信验证码</div>
+                                <input type="text" name="" class="yanzhengma_text" />
+                                <a href="">获取验证码</a>
+                            </div>
+                            <i>请输入短信验证码</i>
+                        </div>
+                        <div class="sixth">
+                            <a href="">忘记密码？</a>
+                        </div>
+                        <div class="submit">
+                            <input id="submit" type="submit" value="点击登录" />
+                        </div>
+                        <div class="zhanghao">
+                            <i>使用合作网站账号登录优购：</i></div>
+                        <div class="items5">
+                            <ul>
+                                <span><a href=""></a>|</span>
+                                <span><a href=""></a>|</span>
+                                <span><a href=""></a>|</span>
+                                <span><a href=""></a>|</span>
+                                <span><a href=""></a></span>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- 尾部 -->
+    <div class="footer">
+        <p class="tright">Copyright &copy; 2011-2014 Yougou Technology Co., Ltd. 粤ICP备09070608号-4 增值电信业务经营许可证：粤 B2-20090203</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/reg.js"></script>
+    <link rel="stylesheet" href="../sass/reg.css">
+    <script src="../js/jquery.md5.js"></script>
+    <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>优购_用户注册</title>
+    <script>
+        window.onload = function() {
+            var inp = document.querySelectorAll('input')
+                // console.log(inp)
+            var reg1 = /^[A-z]\w{5,15}$/;
+            var reg2 = /^.{6,16}$/
+            var reg1 = /^\w{6,16}@[A-z0-9]{2,}\.[A-z]{2,}\.?[A-z]*$/;
+            var reg2 = /^1[356789]\d{9}$/
+            inp[0].onkeyup = function() {
+                if (reg1.test(this.value)) {
+                    result.innerHTML = '';
+                    // result.style.color = 'green';
+                } else {
+                    result.innerHTML = '格式错误';
+                    result.style.color = 'red';
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <ul class="left-content">
+            <li>
+                <div class="scan-code">
+                    <a href="#">关注</a>
+                    <div class="border-content guanzhu" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/weChat.jpg" alt="关注公众号" class="qr-code"><br>
+                            <span class="title">关注公众号</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-app">
+                <div class="scan-code">
+                    <a href="#">下载APP</a>
+                    <div class="border-content xiazai" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/app.jpg" alt="优购APP下载" class="qr-code"><br>
+                            <span class="title">优购APP下载</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="right-content">
+            <li class="item-frist about_user">
+                <a href="./login.html">登录</a>/
+                <a href="./reg.html">注册</a>
+            </li>
+            <li class="item ">
+                <a href="#" class="top-collect">
+                    <i class="heart"></i>
+                    <span class="title">收藏</span>
+                </a>
+            </li>
+            <li class="item-cart">
+                <a href="./shopcar.html"><i class="shopping-cart"></i>购物袋</a>
+            </li>
+            <li class="item">
+                <div class="notice">
+                    <a href="#">公告</a>
+                    <div class="notice-content" style="background:#fff">
+                        <ul class="notice-list">
+                            <li class="item ">
+                                <a target="_blank" href="#">优购客服电话变更</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">关闭分享购频道</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">提醒会员谨防诈骗电话</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 注册主页面 -->
+    <div class="uc-header">
+        <div class="uc-wrapper">
+            <span class="img-wrapper"><img src="../images/signin-register-logo.png" alt=""></span><span class="word">用户注册</span>
+        </div>
+    </div>
+    <!-- 登录区 -->
+    <div class="big-wrapper">
+        <a href="../html/home.html">
+            <div id="body">
+                <div class="login_box">
+                    <div class="login_box_top">
+                        <li><a href="./login.html">登录</a></li>
+                        <li><a href="./reg.html">注册</a></li>
+                    </div>
+                    <form action="../lib/reg.php" method="POST" class="form">
+                        <div class="first">
+                            <span>手机号</span><input type="text" name="username" class="phone_text phone_number" placeholder="请输入您的手机号码" />
+                        </div>
+                        <i>请输入手机号码</i>
+                        <div class="second">
+                            <div class="second1"><span class="yanzhengma">验证码</span><input type="text" name="yanzhengma" class="yanzhengma-img" /></div>
+                            <a href=""><img src="../images/imageCaptcha.png" alt=""></a>
+                        </div>
+                        <i>请输入验证码</i>
+                        <div class="third">
+                            <div class="third1"><span class="yanzhengma_duanxin">短信验证码</span><input type="text" name="yanzhengma_duanxin" class="yanzhengma_text" /></div>
+                            <a href="">获取验证码</a>
+                        </div>
+                        <i>请输入短信验证码</i>
+                        <div class="forth">
+                            <span class="psw">密码</span><input type="password" name="psw" class="phone_text u_password" placeholder="字母、数字、符号均可，6-25个字符以内" />
+                        </div>
+                        <i>请输入密码</i>
+                        <div class="fifth">
+                            <span class="sure">确认密码</span><input type="password" name="sure" class="phone_text" />
+                        </div>
+                        <i>请输入确认密码</i>
+                        <div class="sixth">
+                            <div><input type="checkbox">我已阅读并同意《优购会员注册协议》</div>
+                        </div>
+                        <div class="submit">
+                            <input id="submit" type="submit" value="确认并注册" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- 尾部 -->
+    <div class="footer">
+        <p class="tright">Copyright &copy; 2011-2014 Yougou Technology Co., Ltd. 粤ICP备09070608号-4 增值电信业务经营许可证：粤 B2-20090203</p>
+    </div>
+</body>
+
+</html>

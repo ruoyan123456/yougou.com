@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优购_商品详情页</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/head.js"></script>
+    <script src="../js/cookie.js"></script>
+    <link href="./bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../sass/product.css">
+</head>
+
+<body>
+    <div class="header">
+        <ul class="left-content">
+            <li>
+                <div class="scan-code">
+                    <a href="#">关注</a>
+                    <div class="border-content guanzhu" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/weChat.jpg" alt="关注公众号" class="qr-code"><br>
+                            <span class="title">关注公众号</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-app">
+                <div class="scan-code">
+                    <a href="#">下载APP</a>
+                    <div class="border-content xiazai" style="background:#fff">
+                        <div class="border">
+                            <img src="../images/app.jpg" alt="优购APP下载" class="qr-code"><br>
+                            <span class="title">优购APP下载</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="right-content">
+            <li class="item-frist about_user">
+                <a href="./login.html">登录</a>/
+                <a href="./reg.html">注册</a>
+            </li>
+            <li class="item ">
+                <a href="#" class="top-collect">
+                    <i class="heart"></i>
+                    <span class="title">收藏</span>
+                </a>
+            </li>
+            <li class="item-cart">
+                <a href="./shopcar.html"><i class="shopping-cart"></i>购物袋</a>
+            </li>
+            <li class="item">
+                <div class="notice">
+                    <a href="#">公告</a>
+                    <div class="notice-content" style="background:#fff">
+                        <ul class="notice-list">
+                            <li class="item ">
+                                <a target="_blank" href="#">优购客服电话变更</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">关闭分享购频道</a>
+                            </li>
+                            <li class="item item1 ">
+                                <a target="_blank" href="#">提醒会员谨防诈骗电话</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav">
+        <!-- banner -->
+        <div class="logo">
+            <a href=""><img src="../images/logo.png" alt=""></a>
+        </div>
+        <!-- 导航 -->
+        <div class="ding">
+            <div class="nav-container">
+                <ul class="list">
+                    <li class="nav-logo" style="display: none;"><img src="../images/logo.png" alt=""></li>
+                    <li><a href="#" style="padding: 15px">首页</a></li>
+                    <li><a href="#" style="padding: 15px">女鞋</a>
+                        <ul class="subnav">
+                            <li>
+                                <h3>品牌</h3>
+                                <ul class="subnav-1">
+                                    <li>百丽</li>
+                                    <li>他她</li>
+                                    <li>天美意</li>
+                                    <li>思加图</li>
+                                    <li>森达</li>
+                                    <li>真美诗</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>妙丽</li>
+                                    <li>拔佳</li>
+                                    <li>暇步士</li>
+                                    <li>百思图</li>
+                                    <li>BEFFON</li>
+                                    <li>圣伽步</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>热销推荐</h3>
+                                <ul class="subnav-1">
+                                    <li>2019新款冬靴</li>
+                                    <li>2019新款单鞋</li>
+                                    <li>专柜同款</li>
+                                    <li>人气TOP</li>
+                                    <li>老爹鞋</li>
+                                    <li>小白鞋</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士单鞋</h3>
+                                <ul class="subnav-1">
+                                    <li>浅口鞋</li>
+                                    <li>满帮鞋</li>
+                                    <li>尖头鞋</li>
+                                    <li>乐福鞋</li>
+                                    <li>玛丽珍</li>
+                                    <li>英伦风</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>休闲鞋</li>
+                                    <li>运动鞋</li>
+                                    <li>高跟鞋</li>
+                                    <li>细跟鞋</li>
+                                    <li>粗跟鞋</li>
+                                    <li>运动鞋</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" style="padding: 15px">男鞋</a>
+                        <ul class="subnav">
+                            <li>
+                                <h3>品牌</h3>
+                                <ul class="subnav-1">
+                                    <li>百丽</li>
+                                    <li>他她</li>
+                                    <li>天美意</li>
+                                    <li>思加图</li>
+                                    <li>森达</li>
+                                    <li>真美诗</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>妙丽</li>
+                                    <li>拔佳</li>
+                                    <li>暇步士</li>
+                                    <li>百思图</li>
+                                    <li>BEFFON</li>
+                                    <li>圣伽步</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士单鞋</h3>
+                                <ul class="subnav-1">
+                                    <li>浅口鞋</li>
+                                    <li>满帮鞋</li>
+                                    <li>尖头鞋</li>
+                                    <li>乐福鞋</li>
+                                    <li>玛丽珍</li>
+                                    <li>英伦风</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>休闲鞋</li>
+                                    <li>运动鞋</li>
+                                    <li>高跟鞋</li>
+                                    <li>细跟鞋</li>
+                                    <li>粗跟鞋</li>
+                                    <li>运动鞋</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" style="padding: 15px">运动</a>
+                        <ul class="subnav">
+                            <li>
+                                <h3>品牌</h3>
+                                <ul class="subnav-1">
+                                    <li>百丽</li>
+                                    <li>他她</li>
+                                    <li>天美意</li>
+                                    <li>思加图</li>
+                                    <li>森达</li>
+                                    <li>真美诗</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>妙丽</li>
+                                    <li>拔佳</li>
+                                    <li>暇步士</li>
+                                    <li>百思图</li>
+                                    <li>BEFFON</li>
+                                    <li>圣伽步</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>热销推荐</h3>
+                                <ul class="subnav-1">
+                                    <li>2019新款冬靴</li>
+                                    <li>2019新款单鞋</li>
+                                    <li>专柜同款</li>
+                                    <li>人气TOP</li>
+                                    <li>老爹鞋</li>
+                                    <li>小白鞋</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士单鞋</h3>
+                                <ul class="subnav-1">
+                                    <li>浅口鞋</li>
+                                    <li>满帮鞋</li>
+                                    <li>尖头鞋</li>
+                                    <li>乐福鞋</li>
+                                    <li>玛丽珍</li>
+                                    <li>英伦风</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>休闲鞋</li>
+                                    <li>运动鞋</li>
+                                    <li>高跟鞋</li>
+                                    <li>细跟鞋</li>
+                                    <li>粗跟鞋</li>
+                                    <li>运动鞋</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" style="padding: 15px">户外</a>
+                        <ul class="subnav">
+                            <li>
+                                <h3>品牌</h3>
+                                <ul class="subnav-1">
+                                    <li>百丽</li>
+                                    <li>他她</li>
+                                    <li>天美意</li>
+                                    <li>思加图</li>
+                                    <li>森达</li>
+                                    <li>真美诗</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>妙丽</li>
+                                    <li>拔佳</li>
+                                    <li>暇步士</li>
+                                    <li>百思图</li>
+                                    <li>BEFFON</li>
+                                    <li>圣伽步</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>热销推荐</h3>
+                                <ul class="subnav-1">
+                                    <li>2019新款冬靴</li>
+                                    <li>2019新款单鞋</li>
+                                    <li>专柜同款</li>
+                                    <li>人气TOP</li>
+                                    <li>老爹鞋</li>
+                                    <li>小白鞋</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#" style="padding: 15px">儿童</a>
+                        <ul class="subnav">
+                            <li>
+                                <h3>品牌</h3>
+                                <ul class="subnav-1">
+                                    <li>百丽</li>
+                                    <li>他她</li>
+                                    <li>天美意</li>
+                                    <li>思加图</li>
+                                    <li>森达</li>
+                                    <li>真美诗</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>妙丽</li>
+                                    <li>拔佳</li>
+                                    <li>暇步士</li>
+                                    <li>百思图</li>
+                                    <li>BEFFON</li>
+                                    <li>圣伽步</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>热销推荐</h3>
+                                <ul class="subnav-1">
+                                    <li>2019新款冬靴</li>
+                                    <li>2019新款单鞋</li>
+                                    <li>专柜同款</li>
+                                    <li>人气TOP</li>
+                                    <li>老爹鞋</li>
+                                    <li>小白鞋</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士单鞋</h3>
+                                <ul class="subnav-1">
+                                    <li>浅口鞋</li>
+                                    <li>满帮鞋</li>
+                                    <li>尖头鞋</li>
+                                    <li>乐福鞋</li>
+                                    <li>玛丽珍</li>
+                                    <li>英伦风</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>休闲鞋</li>
+                                    <li>运动鞋</li>
+                                    <li>高跟鞋</li>
+                                    <li>细跟鞋</li>
+                                    <li>粗跟鞋</li>
+                                    <li>运动鞋</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" style="padding: 15px">箱包</a>
+                        <ul class="subnav">
+                            <li>
+                                <h3>品牌</h3>
+                                <ul class="subnav-1">
+                                    <li>百丽</li>
+                                    <li>他她</li>
+                                    <li>天美意</li>
+                                    <li>思加图</li>
+                                    <li>森达</li>
+                                    <li>真美诗</li>
+                                </ul>
+                                <ul class="subnav-1">
+                                    <li>妙丽</li>
+                                    <li>拔佳</li>
+                                    <li>暇步士</li>
+                                    <li>百思图</li>
+                                    <li>BEFFON</li>
+                                    <li>圣伽步</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>热销推荐</h3>
+                                <ul class="subnav-1">
+                                    <li>2019新款冬靴</li>
+                                    <li>2019新款单鞋</li>
+                                    <li>专柜同款</li>
+                                    <li>人气TOP</li>
+                                    <li>老爹鞋</li>
+                                    <li>小白鞋</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>女士靴子</h3>
+                                <ul class="subnav-1">
+                                    <li>短靴</li>
+                                    <li>中靴</li>
+                                    <li>长靴</li>
+                                    <li>绒里靴</li>
+                                    <li>马丁靴</li>
+                                    <li>雪地靴</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search">
+                    <input type="text" id="keyword" name='keyword'>
+                    <a href="#"><i class="fangda"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position"><span class="path">您当前位置：<a href="/">首页</a> &gt; <a href="/">女鞋</a> &gt; <a href="/">女士靴子</a> &gt; <a href="/">短靴</a> &gt; </span></div>
+    <div class="pro-detail"></div>
+    <script>
+        $(function() {
+            let id = location.search.split('=')[1];
+            $.ajax({
+                type: "GET",
+                url: "../lib/getitem.php",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function(data) {
+                    let price = JSON.parse(data.price)
+                    let pic = JSON.parse(data.pic)
+                    let name = data.name
+
+                    // console.log(data)
+                    let temp = ` 
+        <div class="imgdet wrap">
+            <div class="imglist">
+                <ul>
+                    <li class="">
+                        <img src=${pic[0].p3} alt="">
+                    </li>
+                    <li class="">
+                        <img src=${pic[0].p4} alt="">
+                    </li>
+                    <li class="">
+                        <img src=${pic[0].p5} alt="">
+                    </li>
+                    <li class="">
+                        <img src=${pic[0].p6} alt="">
+                    </li>
+                    <li class="active">
+                        <img src=${pic[0].p7} alt="">
+                    </li>
+                    <li class="">
+                        <img src=${pic[0].p6} alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="imgpart">
+                <div class="pic">
+                    <img src=${pic[0].p7} alt="">
+
+                    <div class="magnify" style="display: none; top: 138px; left: 260px;"></div>
+                </div>
+
+                <div class="bigpic" style="display: none;">
+                    <img src=${pic[0].p7} alt="" style="top: -276px; left: -460px;">
+                </div>
+            </div>
+        </div>
+        <div class="shopping-container">
+            <div class="brand-logo">
+                <a href="#">
+                    <img src=${pic[0].p2} width="112" height="52">
+                </a>
+            </div>
+            <h1 style='font-size:16px; padding-top:20px'>${name}</h1>
+            <div class="price clearfix">
+                <h3 id="yitianPrice" class="now symbol" style='font-size:30px; padding-top:40px'>¥<b>${price}</b></h3>
+            </div>
+<hr>
+            <div class="buy">
+                <div class="color">
+                    <span class="fl" style="display: inline;">颜色：</span>
+                    <span class="fl prodSpec" style="display: inline;margin-left: 2px;width: 400px;">
+                        <img width="40" height="40" src=${pic[0].p3} alt="黑单里">
+                        </span>
+                </div>
+                <p data-property="尺码" class="prosize">
+								<span class="title">尺码：</span> 
+								<span class="fl prodSpec size"> 
+											<a data-value="size_s330" data-name="33" class="no">33<i></i></a>
+											<a data-value="size_s340" data-name="34">34<i></i></a>
+											<a data-value="size_s350" data-name="35" class="select">35<i></i></a>
+											<a data-value="size_s360" data-name="36">36<i></i></a>
+											<a data-value="size_s370" data-name="37" class="no">37<i></i></a>
+											<a data-value="size_s380" data-name="38">38<i></i></a>
+											<a data-value="size_s390" data-name="39">39<i></i></a>
+											<a data-value="size_s400" data-name="40">40<i></i></a>
+								</span> 
+								<span class="size_contrast view-table"><a href="javascript:;" id="compare_size_link"><i class="icon"></i>查看尺码表&gt;&gt;</a></span>
+							</p>
+                <br>
+                <div class="count clearfixed" >
+                    <span class="title">数量：</span>
+                    <div class="input-content">
+                        <input type="number" value="1" id="number" min="1" maxlength="10">
+                    </div>
+                    <div class="buttons">
+                        <a href="javascript:;" id="bot_plus" class="plus">
+                            <icon class="icon up"></icon>
+                        </a>
+                        <a href="javascript:;" id="bot_subtract" class="subtract">
+                            <icon class="icon down"></icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="qbuy add-cart">
+                         <span class='add' width="222" height="46" style="line-height: 46px;color:#fff;font-size: 20px; background-color:#333;display:inline-block;padding:0 20px;margin-top:10px">加入购物袋</span>
+                         <span class='buy' width="222" height="46" style="border: 1px solid #333;line-height: 46px;color:#333;font-size: 20px; background-color:#fff;display:inline-block;padding:0 20px;margin-top:10px">立即购买</span>
+                </div>
+            </div>
+            <div id="guessUlike" class="soldoutdiv guess_like">
+                <ul style="list-style: none;"></ul>
+            </div>
+            <div class="share">
+                <div class="share_goods_new">
+                    <span id="favoriteImg" class="good_sc goodsClear">
+                            <a href="javascript:void(0)">
+                            <i class="icon"></i>收藏</a>
+                        </span>
+                   
+                        <i class="share"></i>
+                        <a href="javascript:void(0)" class="bds_more" data-cmd="more">分享</a>
+                </div>
+            </div>
+        </div>`;
+                    $('.pro-detail').append(temp).find('.add').on('click', function() {
+                        alert('加购成功')
+                        console.log(data.id)
+                        addItem(data.id, data.price, $('#number').val());
+
+                    })
+                }
+            })
+
+            function addItem(id, price, num) {
+                var shop = cookie.get('shop'); //获取cookie
+
+                var product = {
+                    id: id,
+                    price: price,
+                    num: num
+                };
+
+                if (shop) {
+                    shop = JSON.parse(shop);
+                    if (shop.some(elm => elm.id == id)) {
+                        shop.forEach(elm => {
+                            elm.id == id ? elm.num = num : null;
+                        });
+                    } else {
+                        shop.push(product);
+                    }
+                } else {
+                    shop = [];
+                    shop.push(product);
+                    console.log(product);
+                }
+                cookie.set('shop', JSON.stringify(shop), 1);
+
+            }
+        })
+    </script>
+    <script src="../js/index1.js"></script>
+
+    <div class="pro-info">
+        <div class="info-title">商品信息</div>
+        <div class="infopic"><img src="../images/pro-info.png" alt=""></div>
+    </div>
+    <div class="size-info">
+        <div class="size-title">尺码信息</div>
+        <div class="sizepic"><img src="../images/sizepic.png" alt=""></div>
+    </div>
+    <div class="detail-info">
+        <div class="detail-title">商品详情</div>
+        <div class="detailpic">
+            <ul>
+                <li><img src="../images/101268213_01_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_02_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_10_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_11_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_12_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_40_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_41_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_42_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_43_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_50_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_51_b.jpg" alt=""></li>
+                <li><img src="../images/101268213_52_b.jpg" alt=""></li>
+                <li><img src="../images/bai_li_.jpg" alt=""></li>
+                <p>BeLLE（百丽），百变所以美丽。主张多变多元的新生代态度，不断融合潮流趋势，拥抱不同的生活体验与生活经历。将女性的百变魅力注入到鞋履设计中，让女人在不同的人生阶段，不同的场合，不同的潮流趋势下，尽显自己自信的一面。致力于为现代都市女性提供充满自由的行走体验。<br></p>
+            </ul>
+        </div>
+    </div>
+    <div class="ev-info">
+        <div class="ev-title">商品评价</div>
+        <div class="usercomm">
+            <p>该商品暂无点评。</p>
+            <strong>赶快来发表第一个点评吧！</strong>
+            <span><a>我要写点评</a></span>
+        </div>
+    </div>
+    <div class="like-info">
+        <div class="like-title">猜你喜欢</div>
+        <div class="likepic"><img src="../images/like.png" alt=""></div>
+    </div>
+    <!-- 尾部 -->
+    <div class="footer-feature">
+        <div class="container">
+            <div class="customer-service">
+                <ul class="content">
+                    <li>
+                        <i class="icon bg-bottom_logistics"></i>
+                        <span href="#" class="title1">正品保证</span>
+                    </li>
+                    <li class="item">
+                        <i class="icon bg-bottom_ensure"></i>
+                        <span href="#" class="title1">10天退换货</span>
+                    </li>
+                    <li class="item">
+                        <i class="icon bg-bottom_service"></i>
+                        <span href="#" class="title1">10天调补差价额</span>
+
+                    </li>
+                    <li class="item">
+                        <i class="icon bg-bottom_Price_difference"></i>
+                        <span href="#" class="title1">09:00—21:00在线客服</span>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-help">
+        <div class="container">
+            <div class="guide-container">
+                <ul class="content">
+                    <li>
+                        <dl>
+                            <dt>新手帮助</dt>
+                            <dd class="dd-title-first">
+                                <a href="#" target="_blank" rel="nofollow" class="link">交易条款协议</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" target="_blank" rel="nofollow" class="link">注册新用户</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">会员积分详情</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl>
+                            <dt>购物指南</dt>
+                            <dd class="dd-title-first">
+                                <a href="#" class="link">订购流程</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">验货与签收</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">订单配送</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl>
+                            <dt>支付/配送</dt>
+                            <dd class="dd-title-first">
+                                <a href="#" class="link">支付方式</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">配送方式</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">配送时间及运费</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl>
+                            <dt>售后服务</dt>
+                            <dd class="dd-title-first">
+                                <a href="#" class="link">退换货政策</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">退款说明</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">发票制度</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl>
+                            <dt>会员服务</dt>
+                            <dd class="dd-title-first">
+                                <a href="#" class="link">找回密码</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">联系我们</a>
+                            </dd>
+                            <dd class="dd-title">&nbsp;</dd>
+                        </dl>
+                    </li>
+                    <li class="item" style="display: none;">
+                        <dl>
+                            <dt>企业合作</dt>
+                            <dd class="dd-title-first">
+                                <a href="#" class="link">分销项目</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">礼品卡</a>
+                            </dd>
+                            <dd class="dd-title">&nbsp;</dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl>
+                            <dt>优购客服</dt>
+                            <dd class="dd-title-first">
+                                <a href="#" class="link">
+                                    <i class="icon bg-bottom_Consultation"></i> 在线咨询</a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">Email: ygservice@belle.com.cn
+                        </a>
+                            </dd>
+                            <dd class="dd-title">
+                                <a href="#" class="link">微信客服：优购时尚商城</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="national-certification">
+                <ul class="content">
+                    <li>
+                        <a href="#" key="521b3d2524306332d3107ff3" target="_blank">
+                            <img src="../images/sm_124x47.png" width="124" height="47" style="border: medium none;" alt="安全联盟认证">
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" target="_blank" title="众信网" rel="nofollow">
+                            <img src="../images/ebs-logo.jpg" width="124" height="47">
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" target="_blank" rel="nofollow">
+                            <img src="../images/beian1.png" width="124" height="47">
+                        </a>
+                    </li>
+
+                    <li class="item">
+                        <a href="#" target="_blank" rel="nofollow">
+                            <img src="../images/beian2.png" width="124" height="47">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="qr-code">
+                    <li>
+                        <div class="border">
+                            <img src="../images/app.jpg" alt="扫描下载手机客户端" class="img-app">
+                        </div>
+                        <div class="title">扫描下载手机客户端</div>
+                    </li>
+                    <li class="item">
+                        <div class="border">
+                            <img src="../images/weChat.jpg" alt="关注公众号">
+                        </div>
+                        <div class="title">关注公众号</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="friendly-link">
+                <ul class="content">
+                    <li>
+                        <a href="#" class="title-first">关于优购</a>|
+                    </li>
+                    <li>
+                        <a href="#" class="title2">集团采购</a>|
+                    </li>
+                    <li>
+                        <a href="#" class="title2">招贤纳士</a>|
+                    </li>
+                    <li>
+                        <a href="#" class="title2">手机优购</a>|
+                    </li>
+                    <li>
+                        <a href="#" class="title2">联系我们</a>|
+                    </li>
+                    <li>
+                        <a href="#" class="title2">友情链接</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    Copyright © 2011-2016 Yougou Technology Co., Ltd.
+                    <a href="#" target="_blank" rel="nofollow">粤ICP备09070608号-4</a> 增值电信业务经营许可证：
+                    <a href="#" target="_blank" rel="nofollow">粤B2-20190636
+                  </a>&nbsp;
+                    <span>深公网安备：4403101910665 </span>
+                    <a target="_blank" href="#">
+                        <span>粤公网安备 44030502000017号</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+scriptnihaowojuede nishige shazi
