@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>优购网_首页</title>
-    <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../sass/index.css" rel="stylesheet">
+    <link href="./bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../style/index.min.css" rel="stylesheet">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/jquery.lazyload.min.js"></script>
     <script src="../js/head.js"></script>
 </head>
@@ -511,20 +512,21 @@
 
                         if (insert1.offsetLeft >= 56) {
                             insert1.style.left = 56 + 'px';
+
                         } else {
                             insert1.style.left = insert1.offsetLeft + 918 + 'px';
-
                         }
+
                     }
                     right.onclick = function() {
-                        console.log(insert1.offsetLeft)
+
                         if (insert1.offsetLeft <= -1780) {
                             insert1.style.left = -1780 + 'px';
-                            console.log(1)
+
 
                         } else {
                             insert1.style.left = insert1.offsetLeft - 890 + 'px';
-                            console.log(insert1.style.left)
+
                         }
 
                     }
@@ -559,7 +561,7 @@
                             </li> -->
                         </ul>
                     </ul>
-                    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
                     <script>
                         $(function() {
                             $.ajax({
