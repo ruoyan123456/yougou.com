@@ -380,6 +380,14 @@ h2 {
     text-align: center;
     margin-left: 10px;
     vertical-align: center;
+    position: relative;
+    transition: all 0.8s;
+}
+
+.carousel-inner .item .insert .insert1 li:hover {
+    top: -5px;
+    left: -3px;
+    box-shadow: 2px 2px 2px 2px #ccc;
 }
 
 .carousel-inner .item div {

@@ -8,9 +8,8 @@
     <title>优购网_首页</title>
     <link href="./bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
     <link href="../style/index.min.css" rel="stylesheet">
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../js/jquery.lazyload.min.js"></script>
-    <script src="../js/head.js"></script>
+    <!-- <script src="../js/jquery.lazyload.min.js"></script> -->
+    <script src="../js/require.js" data-main="../js/main.index"></script>
 </head>
 
 <body>
@@ -511,21 +510,21 @@
                     left.onclick = function() {
 
                         if (insert1.offsetLeft >= 56) {
-                            insert1.style.left = 56 + 'px';
+                            insert1.style.left = -880 + 'px';
 
                         } else {
-                            insert1.style.left = insert1.offsetLeft + 918 + 'px';
+                            insert1.style.left = insert1.offsetLeft + 900 + 'px';
                         }
 
                     }
                     right.onclick = function() {
 
-                        if (insert1.offsetLeft <= -1780) {
-                            insert1.style.left = -1780 + 'px';
+                        if (insert1.offsetLeft < -880) {
+                            insert1.style.left = 56 + 'px';
 
 
                         } else {
-                            insert1.style.left = insert1.offsetLeft - 890 + 'px';
+                            insert1.style.left = insert1.offsetLeft - 895 + 'px';
 
                         }
 
@@ -562,7 +561,7 @@
                         </ul>
                     </ul>
 
-                    <script>
+                    <!-- <script>
                         $(function() {
                             $.ajax({
                                 type: "get",
@@ -586,7 +585,7 @@
                                 }
                             });
                         });
-                    </script>
+                    </script> -->
                 </div>
             </div>
 
@@ -668,17 +667,17 @@
             <div class="bigbrand-pic1">
                 <ul>
                     <li>
-                        <video class="video" poster="../images/bai_li_(2).jpg" controlslist="nodownload" onclick="playPause(this)" controls="">
+                        <video class="video" poster="../images/bai_li_(2).jpg" controlslist="nodownload" controls="">
                                           <source src="#">
                                       </video>
                     </li>
                     <li>
-                        <video class="video" poster="../images/bai_li_(2).jpg" controlslist="nodownload" onclick="playPause(this)" controls="">
+                        <video class="video" poster="../images/bai_li_(2).jpg" controlslist="nodownload" controls="">
                                               <source src="#">
                                           </video>
                     </li>
                     <li>
-                        <video class="video" poster="../images/bai_li_(2).jpg" controlslist="nodownload" onclick="playPause(this)" controls="">
+                        <video class="video" poster="../images/bai_li_(2).jpg" controlslist="nodownload" controls="">
                                                   <source src="#">
                                               </video>
                     </li>

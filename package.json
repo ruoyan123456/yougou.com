@@ -4,8 +4,9 @@
   "description": "{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
-    "bootstrap": "^4.3.1"
+    "requirejs": "^2.3.6"
   },
   "devDependencies": {},
   "scripts": {
