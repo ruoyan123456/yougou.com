@@ -2,9 +2,12 @@ require.config({
     paths: {
         jquery: "./jquery.min",
         product: "./lib/product",
-        cookie: "./cookie"
+        cookie: "./cookie",
+
     },
-    shim: {}
+    shim: {
+
+    }
 });
 
 require(['jquery', 'product', 'cookie'], function($, product, cookie) {

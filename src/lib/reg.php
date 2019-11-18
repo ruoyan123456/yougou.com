@@ -2,8 +2,8 @@
 header('content-type:text/html;charset=utf-8');
 include('./conn.php');
     // 接收前端发送的数据
-    $phone = $_REQUEST['username'];
-    $password=$_REQUEST['psw'];
+    $phone = $_POST['username'];
+    $password=$_POST['psw'];
 
     $sql = "select * from members where u_phone='$phone'";  //查询语句
 
@@ -22,7 +22,7 @@ include('./conn.php');
 
     if($res){
         echo '<script>alert("注册成功")</script>';
-        echo '<script>location.href="../html/home.html"</script>';
+        echo '<script>location.href="../html/login.html"</script>';
     }
 
     $mysqli->close();

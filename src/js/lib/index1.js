@@ -51,6 +51,13 @@
 define(['jquery'], function($) {
     return {
         render: function() {
+            $("img.lazy").lazyload({
+                effect: "fadeIn",
+                placeholder: "../images/timg.jpg",
+                failurelimit: 10
+
+
+            }, 2000);
             $.ajax({
                 type: "get",
                 url: "../lib/getall.php",
@@ -63,7 +70,7 @@ define(['jquery'], function($) {
                         temp += `
                                     <li>
                                         <a href="product.html?id=${elm.id}" style="color:#333;text-decoration:none">
-                                        <div><img src="${pic[0].p1}" alt="#"></div><br>
+                                        <div><img src="${pic[0].p1}" alt="#" class="lazy"></div><br>
                                         <img src="${pic[0].p2}" alt="#" class="li-logo lazy"><br>
                                         <span>${elm.title}</span><br>
                                         <b>￥${elm.price}</b></a>
@@ -85,6 +92,9 @@ define(['jquery'], function($) {
                     $('.nav-logo').attr('style', 'display:none')
                 }
             })
-        }
+        },
+        // lazy: function() {
+
+        // }
     }
 })

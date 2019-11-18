@@ -441,6 +441,11 @@ li b {
   padding: 0 10px;
 }
 
+.bigbrand-pic li > a :hover {
+  transition: all 1s;
+  transform: scale(1.1);
+}
+
 .hover {
   display: none;
 }
