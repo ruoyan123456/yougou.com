@@ -93,8 +93,8 @@ define(['jquery'], function($) {
                 }
             })
         },
-        // lazy: function() {
-
-        // }
+        slider: function() {
+            $('#slider').slider()
+        }
     }
 })

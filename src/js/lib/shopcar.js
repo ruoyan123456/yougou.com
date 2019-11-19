@@ -55,7 +55,6 @@ define(['jquery', 'cookie'], function($) {
                             count()
                         })
 
-
                         //清除
                         $('.clearbag').on('click', function() {
                             cookie.remove('shop');
@@ -83,8 +82,7 @@ define(['jquery', 'cookie'], function($) {
             function count() {
                 var sum = 0;
                 $('.price').html(null)
-                    // $('.price')[0].innerHTML = null;
-                    // console.log(Number($('.shopcar').find('input:checked').parents('tr').find('.count').text()))
+
                 $('.shopcar').find('input:checked').parents('tr').find('.count').text(function(i, val) {
                     sum += parseInt(val);
                 })

@@ -2,11 +2,9 @@ define(['jquery'], function($) {
     return {
         render: function() {
 
-
-
             var reg2 = /^.{6,16}$/
-
             var reg4 = /^1[356789]\d{9}$/
+
             $('#userName')[0].onkeyup = function() {
                 if (reg4.test(this.value)) {
 

@@ -121,12 +121,12 @@ define(['jquery', 'cookie'], function($) {
                             </div>`;
                     $('.pro-detail').append(temp).find('.add').on('click', function() {
                         alert('加购成功')
-                            // console.log(data.id)
+
                         addItem(data.id, data.price, $('#number').val());
                     })
                     let ulobj = $(".imglist>ul");
 
-                    let pic11 = $(".imgpart>.pic");
+
 
                     let picimg = $(".imgpart>.pic>img");
 
@@ -143,11 +143,11 @@ define(['jquery', 'cookie'], function($) {
                     let bigpic = $(".imgpart>.bigpic");
 
                     let objimg11 = $(".imgpart>.bigpic>img");
+                    let pic11 = $(".imgpart>.pic");
 
-                    pic11.on('mousemove', function(e) {
+                    pic11.on('mouseover', function(e) {
 
                         magnify.show();
-
                         bigpic.show();
 
                         let pagex = e.pageX;

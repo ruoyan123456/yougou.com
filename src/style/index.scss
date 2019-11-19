@@ -302,7 +302,48 @@ li {
 .banner {
     width: 100%;
     height: 550px;
-    background: url(../images/99520190917T181943.jpg) center center no-repeat;
+    // background: url(../images/lunbo2.jpg) center center no-repeat;
+}
+
+#slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    &>div {
+        position: absolute;
+        width: 7680px;
+        &>img {
+            // display: block;
+            float: left
+        }
+    }
+    // &>span {
+    //     position: absolute;
+    //     top: 180px;
+    //     font-size: 3em;
+    //     z-index: 2;
+    //     cursor: pointer;
+    //     user-select: none;
+    // }
+    // &>span:last-of-type {
+    //     right: 0;
+    // }
+    &>ul {
+        list-style: none;
+        position: absolute;
+        bottom: 20px;
+        left: 40%;
+        &>li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #3e3e3e;
+            float: left;
+            margin: 0 20px;
+        }
+    }
 }
 
 
@@ -451,6 +492,7 @@ li b {
          :hover {
             transition: all 1s;
             transform: scale(1.1);
+            opacity: 0.8;
         }
     }
 }
@@ -526,6 +568,31 @@ li b {
 .model-pic li {
     float: left;
     padding-right: 20px;
+    &>a {
+        position: relative;
+        &>p {
+            display: inline-block;
+            height: 250px;
+            width: 231px;
+            background-color: #000;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: -240px;
+            z-index: 20;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            line-height: 250px;
+            // display: none;
+        }
+    }
+}
+
+.model-pic>li>a:hover p {
+    transition: opacity 0.5s;
+    opacity: 0.6;
+    // display: block;
 }
 
 .model-pic .last-li {
