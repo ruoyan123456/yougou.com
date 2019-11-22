@@ -9,7 +9,8 @@
     <title>优购网_用户登录</title>
     <meta name="description" content="优购网" />
     <meta name="keywords" content="优购网" />
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="../js/require.js" data-main="../js/main.login"></script>
     <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../style/login.min.css" rel="stylesheet">
 </head>
@@ -89,7 +90,7 @@
                         <li><a>账户密码登录</a></li>
                         <li><a>手机快捷登录</a></li>
                     </div>
-                    <form action="../lib/login.php" method="GET" class="form">
+                    <div method="GET" class="form">
                         <div class="third">
                             <span></span>
                             <input type="text" name="username" class="user_text" placeholder="手机号/会员名称/邮箱" />
@@ -119,7 +120,7 @@
                             <a href="">忘记密码？</a>
                         </div>
                         <div class="submit">
-                            <input id="submit" type="submit" value="点击登录" />
+                            <input id="submit" type="button" value="点击登录" />
                         </div>
                         <div class="zhanghao">
                             <i>使用合作网站账号登录优购：</i></div>
@@ -132,7 +133,7 @@
                                 <span><a href=""></a></span>
                             </ul>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </a>
@@ -141,6 +142,9 @@
     <div class="footer">
         <p class="tright">Copyright &copy; 2011-2014 Yougou Technology Co., Ltd. 粤ICP备09070608号-4 增值电信业务经营许可证：粤 B2-20090203</p>
     </div>
+
 </body>
+<script>
+</script>
 
 </html>

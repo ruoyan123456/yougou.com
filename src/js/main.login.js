@@ -1,7 +1,7 @@
 require.config({
     paths: {
         jquery: "./jquery.min",
-        reg: "./lib/reg",
+        login: "./lib/login",
         md5: "jquery.md5"
     },
     shim: {
@@ -9,6 +9,6 @@ require.config({
     }
 });
 
-require(['jquery', 'reg', 'md5'], function($, reg, md5) {
-    reg.render();
+require(['jquery', 'login', 'md5'], function($, login, md5) {
+    login.render();
 });

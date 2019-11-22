@@ -28,6 +28,29 @@ define(['jquery'], function($) {
                     $('.pwdtext1').html('密码不一致').css('color', 'red');
                 }
             }
+
+            $('#submit').on('click', function() {
+                console.log(1)
+                $.ajax({
+                    type: "post",
+                    url: "../lib/reg.php",
+                    data: {
+                        username: $('#userName').val(),
+                        psw: $.md5($('#password').val())
+                    },
+                    success: function(response) {
+                        console.log(response)
+                        if (response == 1) {
+                            alert('用户名已存在');
+                            location.reload();
+                        } else if (response == 2) {
+                            alert('注册成功')
+                            location.href = "../html/login.html";
+                        }
+                    }
+                });
+            })
+
         }
 
     }

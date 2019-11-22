@@ -49,7 +49,7 @@
                         left: -(elms._index - 1) * 1920 + 'px'
                     }, defaults.speed)
                 });
-            }
+            };
 
             // 2. 开始动画
             start = function(fx) {
@@ -66,7 +66,6 @@
                     }
                 }
 
-
                 elms.sliderDiv.animate({
                     left: left
                 }, defaults.speed, function() {
@@ -81,7 +80,7 @@
 
                 });
 
-            }
+            };
 
             // 3. 方向控制
             next = function() {
@@ -98,21 +97,12 @@
             stop = function() {
                 elms.sliderDiv.stop(true, true);
                 clearInterval(timer);
-            }
-
-
-            // clid = function() {
-
-            //     elms._index = that.children('ul').children('li').index(this) + 1;
-            //     console.log(that.children('ul').children('li').index())
-            //     that.css('left', -(elms._index - 1) * 570 + 'px');
-            // }
+            };
 
             main = function() {
                 init();
                 timer = setInterval(start.bind(null, 1), defaults.delay + defaults.speed);
             }
-
             main();
 
         }

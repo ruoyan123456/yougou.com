@@ -10,8 +10,9 @@ include('./conn.php');
     $result = $mysqli->query($sql);  //执行sql语句
 
     if($result->num_rows > 0){
-        echo '<script>alert("用户名已存在");</script>';
-        echo '<script>location.href="../html/reg.html";</script>';
+        // echo '<script>alert("用户名已存在");</script>';
+        // echo '<script>location.href="../html/reg.html";</script>';
+        echo 1;
         $mysqli->close();
         die; //如果用户名存在 代码不再往下执行
     }
@@ -21,8 +22,9 @@ include('./conn.php');
     $res = $mysqli->query($insSql);//执行插入语句
 
     if($res){
-        echo '<script>alert("注册成功")</script>';
-        echo '<script>location.href="../html/login.html"</script>';
+        // echo '<script>alert("注册成功")</script>';
+        // echo '<script>location.href="../html/login.html"</script>';
+        echo 2;
     }
 
     $mysqli->close();

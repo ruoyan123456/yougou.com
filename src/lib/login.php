@@ -9,11 +9,11 @@
     $res = $mysqli->query($sql);
 
     if($res->num_rows>0){
-        // echo '{"status":200,"msg":"登陆成功"}';
-        echo "<script>alert('登陆成功');location.href='../html/home.html';</script>";
+        echo '{"status":200,"msg":"登陆成功","mm":"1"}';
+        
     }else{
-        // echo '{"status":200,"msg":"用户名或密码不正确"}';
-        echo "<script>alert('用户名或密码不正确');location.href='../html/login.html';</script>";
+        echo '{"status":200,"msg":"用户名或密码不正确","mm":"2"}';
+        
     }
 
     $mysqli->close();
