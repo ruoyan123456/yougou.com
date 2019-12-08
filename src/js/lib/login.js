@@ -3,7 +3,7 @@ define(['jquery'], function() {
     return {
         render: function() {
             $('#submit').on('click', function() {
-                console.log(1)
+                // console.log(1)
                 $.ajax({
                     type: "post",
                     url: "../lib/login.php",

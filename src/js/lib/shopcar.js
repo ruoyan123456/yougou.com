@@ -24,13 +24,17 @@ define(['jquery', 'cookie'], function($) {
                             // console.log(arr);
                             // console.log(pic[0].p1)
                             // console.log(name)
+                            // 
+                            // <span style=" display:inline-block; "></span>
                             tempstr += `
-                            <tr width="998" height="100" style="border: 1px solid red;">
-                            <th> 
-                                    <input class="none" type="checkbox" id="CNYcheckStartAll" name="CNYcheckAll">
-                                <span width="72" height="72">
-                                        <img src=${pic[0].p1} alt="" width="60" height="60">
-                                    </span></th>
+                            <tr width="998" height="100">
+                            
+                            <th style="width:80px;height:80px;"> 
+                                
+                            <input class="none" type="checkbox" id="CNYcheckStartAll" name="CNYcheckAll" style="vertical-align:middle">
+                                <img src=${pic[0].p1} alt="" width="60" height="60" style="vertical-align:middle">
+                                    
+                                    </th>
                             <th>
                                 <a href="#">${name}</a>
                             </th>
@@ -40,9 +44,9 @@ define(['jquery', 'cookie'], function($) {
                             <th>${price}</th>
                             <th>${arr[0].num}</th>
                             <th><span class='count'>${(arr[0].num*elm.price).toFixed(2)}</span><br> 移入收藏夹
-                                <br> <span class="del" data-id=${shop.index}>删除</span>
+                                <br>
                                 <br></th>
-                            <th></th>
+                            <th> <span class="del" data-id=${shop.index}>删除</span></th>
                         </tr>`;
                         });
                         $('tbody').append(tempstr);
